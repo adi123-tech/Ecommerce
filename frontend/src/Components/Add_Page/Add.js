@@ -10,7 +10,7 @@ function Add() {
 
   async function addProduct() {
     const userid = JSON.parse(localStorage.getItem("user"));
-    const add = await fetch("http://localhost:5000/addproduct", {
+    const add = await fetch("https://ecommerce-backend-q7n6.onrender.com/addproduct", {
       method: "post",
       headers: {
         "content-type": "application/json",
