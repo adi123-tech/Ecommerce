@@ -18,7 +18,7 @@ function Login() {
 
   async function submitdata() {
     console.log(email+password);
-    let res = await fetch("http://localhost:5000/login",{
+    let res = await fetch("https://ecommerce-backend-q7n6.onrender.com/login",{
         'method':'post',
         'headers':{'content-type':'application/json'},
         'body': JSON.stringify({"Email":email,"Password":password})
