@@ -27,7 +27,7 @@ function Update() {
 
   async function prefill() {
     const res = await fetch(
-      `http://localhost:5000/prefillformforupdate/${id}`,
+      `https://ecommerce-backend-q7n6.onrender.com/prefillformforupdate/${id}`,
       {
         headers: {
           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -45,7 +45,7 @@ function Update() {
     }
   }
   async function updatedata() {
-    const res = await fetch("http://localhost:5000/update/" + id, {
+    const res = await fetch("https://ecommerce-backend-q7n6.onrender.com/update/" + id, {
       method: "put",
       headers: {
         "content-type": "application/json",
