@@ -8,7 +8,7 @@ function Products() {
   const [data, setData] = useState(false);
 
   async function getList() {
-    const data = await fetch("http://localhost:5000/listproduct", {
+    const data = await fetch("https://ecommerce-backend-q7n6.onrender.com/listproduct", {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
@@ -28,7 +28,7 @@ function Products() {
   }, []);
 
   async function deleteProduct(id) {
-    const data = await fetch(`http://localhost:5000/deleteproduct/${id}`, {
+    const data = await fetch(`https://ecommerce-backend-q7n6.onrender.com/deleteproduct/${id}`, {
       method: "delete",
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
@@ -47,7 +47,7 @@ function Products() {
       getList();
       setData(false);
     }
-    const res = await fetch(`http://localhost:5000/search/${key}`, {
+    const res = await fetch(`https://ecommerce-backend-q7n6.onrender.com/search/${key}`, {
       headers: {
         authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
