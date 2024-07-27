@@ -23,7 +23,7 @@ function Signup() {
   }
 
   async function submitdata() {
-    const res = await fetch("http://localhost:5000/signup", {
+    const res = await fetch("https://ecommerce-backend-q7n6.onrender.com/signup", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ Name: name, Email: email, Password: password }),
